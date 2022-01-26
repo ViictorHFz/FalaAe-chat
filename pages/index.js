@@ -40,7 +40,7 @@ function Title(props) {
       <Tag>{props.children}</Tag>
       <style jsx>{`
         ${Tag} {
-          color: ${appConfig.theme.colors.neutrals[400]};
+          color: ${appConfig.theme.colors.neutrals['050']};
           font-size: 24px;
           font-weight: 600;
         }
@@ -48,19 +48,6 @@ function Title(props) {
     </>
   );
 }
-
-//Componente React
-// function HomePage() {
-//     //JSX
-//     return(
-//         <div>
-//             <GlobalStyle />
-//             <Title tag="h2">Boas vindas de volta</Title>
-//             <h2>Sup - chat</h2>
-//         </div>
-//     )
-// }
-// export default HomePage
 
 export default function HomePage() {
   const username = "ViictorHFz";
@@ -73,9 +60,9 @@ export default function HomePage() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: appConfig.theme.colors.primary[500],
+          backgroundColor: appConfig.theme.colors.primary[800],
           backgroundImage:
-            "url(https://virtualbackgrounds.site/wp-content/uploads/2020/08/the-matrix-digital-rain.jpg)",
+            "url(https://virtualbackgrounds.site/wp-content/uploads/2020/07/theres-no-place-like-127.0.0.1-plaque.jpg)",
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundBlendMode: "multiply",
@@ -96,7 +83,7 @@ export default function HomePage() {
             padding: "32px",
             margin: "16px",
             boxShadow: "0 2px 10px 0 rgb(0 0 0 / 20%)",
-            backgroundColor: appConfig.theme.colors.neutrals[700],
+            backgroundColor: appConfig.theme.colors.neutrals[999],
           }}
         >
           {/* Formulário */}
@@ -112,12 +99,12 @@ export default function HomePage() {
               marginBottom: "32px",
             }}
           >
-            <Title>Boas vindas de volta!</Title>
+            <Title>Bem vindo!</Title>
             <Text
               variant="body3"
               styleSheet={{
                 marginBottom: "32px",
-                color: appConfig.theme.colors.neutrals[300],
+                color: appConfig.theme.colors.neutrals['050'],
               }}
             >
               {appConfig.name}
@@ -127,7 +114,7 @@ export default function HomePage() {
               fullWidth
               textFieldColors={{
                 neutral: {
-                  textColor: appConfig.theme.colors.neutrals[200],
+                  textColor: appConfig.theme.colors.neutrals['050'],
                   mainColor: appConfig.theme.colors.neutrals[900],
                   mainColorHighlight: appConfig.theme.colors.primary[500],
                   backgroundColor: appConfig.theme.colors.neutrals[800],
@@ -139,7 +126,7 @@ export default function HomePage() {
               label="Entrar"
               fullWidth
               buttonColors={{
-                contrastColor: appConfig.theme.colors.neutrals["000"],
+                contrastColor: appConfig.theme.colors.neutrals[900],
                 mainColor: appConfig.theme.colors.primary[500],
                 mainColorLight: appConfig.theme.colors.primary[400],
                 mainColorStrong: appConfig.theme.colors.primary[600],
@@ -156,7 +143,7 @@ export default function HomePage() {
               alignItems: "center",
               maxWidth: "200px",
               padding: "16px",
-              backgroundColor: appConfig.theme.colors.neutrals[800],
+              backgroundColor: appConfig.theme.colors.neutrals[900],
               border: "1px solid",
               borderColor: appConfig.theme.colors.neutrals[999],
               borderRadius: "10px",
@@ -174,7 +161,7 @@ export default function HomePage() {
             <Text
               variant="body4"
               styleSheet={{
-                color: appConfig.theme.colors.neutrals[200],
+                color: appConfig.theme.colors.neutrals['050'],
                 backgroundColor: appConfig.theme.colors.neutrals[900],
                 padding: "3px 10px",
                 borderRadius: "1000px",
