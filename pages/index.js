@@ -1,4 +1,5 @@
 import { Box, Button, Text, TextField, Image } from "@skynexui/components";
+import React from "react";
 import appConfig from "../config.json";
 
 function GlobalStyle() {
@@ -33,7 +34,7 @@ function GlobalStyle() {
 }
 
 function Title(props) {
-  console.log(props);
+  // console.log(props);
   const Tag = props.tag || 'h1';
   return (
     <>
@@ -50,7 +51,8 @@ function Title(props) {
 }
 
 export default function HomePage() {
-  const username = "ViictorHFz";
+  // const username = "ViictorHFz"
+  const [username, setUsername]= React.useState('ViictorHFz');
 
   return (
     <>
@@ -89,6 +91,10 @@ export default function HomePage() {
           {/* Formulário */}
           <Box
             as="form"
+            onSubmit={function (event){
+              event.preventDefault();
+              console.log("Olá botão entrar")
+            }}
             styleSheet={{
               display: "flex",
               flexDirection: "column",
@@ -111,6 +117,14 @@ export default function HomePage() {
             </Text>
 
             <TextField
+              value={username}
+              onChange={function (event){
+                // console.log('valor digitado', event.target.value)
+                //Onde está o valor?
+                const valor = event.target.value;
+                //funçaõ setUsername do react altera o valor da variável
+                setUsername(valor)
+              }}
               fullWidth
               textFieldColors={{
                 neutral: {
