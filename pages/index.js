@@ -64,7 +64,7 @@ export default function HomePage() {
             as="form"
             onSubmit={function (event){
               event.preventDefault();
-              console.log("Olá botão entrar")
+              //console.log("Olá botão entrar")
               router.push('/chat')
               // window.location.href = '/chat'
             }}
