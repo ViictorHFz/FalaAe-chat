@@ -30,8 +30,7 @@ function GlobalStyle() {
   }
 
 export default function MyApp({ Component, pageProps }) {
-    // Tudo colocado aqui roda em todas as páginas
-
+  
     return (
         <>
             <GlobalStyle />
