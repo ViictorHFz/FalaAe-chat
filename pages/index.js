@@ -64,8 +64,7 @@ export default function HomePage() {
             as="form"
             onSubmit={function (event){
               event.preventDefault();
-              //console.log("Olá botão entrar")
-              router.push('/chat')
+              router.push(`/chat?username=${username}`)
               // window.location.href = '/chat'
             }}
             styleSheet={{
@@ -92,10 +91,9 @@ export default function HomePage() {
             <TextField
               value={username}
               onChange={function (event){
-                // console.log('valor digitado', event.target.value)
                 //Onde está o valor?
                 const valor = event.target.value;
-                //funçaõ setUsername do react altera o valor da variável
+                //função setUsername (hook) do react altera o valor da variável
                 setUsername(valor)
               }}
               fullWidth
