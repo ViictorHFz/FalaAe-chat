@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import appConfig from "../config.json";
 import { createClient } from '@supabase/supabase-js'
 import { useRouter } from "next/router";
+import { ButtonSendSticker } from "../src/components/ButtonSendStickers"
 
 
 
@@ -120,10 +121,11 @@ export default function ChatPage() {
                 marginRight: "12px",
                 color: appConfig.theme.colors.neutrals[200],
               }}
-            />{" "}
-          </Box>{" "}
-        </Box>{" "}
-      </Box>{" "}
+            />
+            <ButtonSendSticker />
+          </Box>
+        </Box>
+      </Box>
     </Box>
   );
 }
@@ -140,7 +142,7 @@ function Header() {
           justifyContent: "space-between",
         }}
       >
-        <Text variant="heading5"> Chat </Text>{" "}
+        <Text variant="heading5"> Fala Aê - Chat </Text>{" "}
         <Button
           variant="tertiary"
           colorVariant="neutral"
