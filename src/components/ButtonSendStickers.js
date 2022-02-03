@@ -79,6 +79,11 @@ export function ButtonSendSticker(props) {
                     props.onStickerClick(sticker);
                   }
                 }}
+                onClick={() => {
+                  if(Boolean(props.onStickerClick)) {
+                    props.onStickerClick(sticker)
+                  }
+                }}
                 tag="li" key={sticker}
                 styleSheet={{
                   width: '50%',
